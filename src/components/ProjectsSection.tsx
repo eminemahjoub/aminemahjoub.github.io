@@ -70,23 +70,7 @@ export const ProjectsSection = () => {
                           rel="noopener noreferrer"
                         >
                           <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </a>
-                      </Button>
-                    )}
-                    {project.demo && (
-                      <Button
-                        size="sm"
-                        className="flex-1 bg-primary hover:bg-primary/90"
-                        asChild
-                      >
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Demo
+                          View Code
                         </a>
                       </Button>
                     )}

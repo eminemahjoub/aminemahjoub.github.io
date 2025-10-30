@@ -24,9 +24,9 @@ export const Navbar = () => {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
-    { label: "Research", href: "#research" },
-    { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
+    { label: "Community", href: "#community" },
     { label: "Contact", href: "#contact" },
   ];
 

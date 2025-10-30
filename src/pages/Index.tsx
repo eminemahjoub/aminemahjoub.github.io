@@ -2,9 +2,14 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
-import { ResearchSection } from "@/components/ResearchSection";
-import { SkillsSection } from "@/components/SkillsSection";
+import { EducationSection } from "@/components/EducationSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { CertificationsSection } from "@/components/CertificationsSection";
+import { AwardsSection } from "@/components/AwardsSection";
+import { ResearchSection } from "@/components/ResearchSection";
+import { PublicationsSection } from "@/components/PublicationsSection";
+import { CommunitySection } from "@/components/CommunitySection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -15,9 +20,14 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <ResearchSection />
-      <SkillsSection />
+      <EducationSection />
       <ExperienceSection />
+      <SkillsSection />
+      <CertificationsSection />
+      <AwardsSection />
+      <ResearchSection />
+      <PublicationsSection />
+      <CommunitySection />
       <ContactSection />
       <Footer />
     </div>

@@ -44,6 +44,16 @@ export const HeroSection = () => {
             >
               Get in Touch
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="px-8"
+              asChild
+            >
+              <a href="/cv.pdf" download="Amine_Mahjoub_CV.pdf">
+                Download CV
+              </a>
+            </Button>
           </div>
 
           {/* Social Links */}
