@@ -40,30 +40,39 @@
     <meta name="geo.placename" content="Tunisia" />
     <meta name="geo.position" content="35.5;10.5" />
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) - Enhanced -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Amine Mahjoub",
+      "alternateName": "Amine Mahjoub",
       "jobTitle": "AI Engineer & Researcher",
       "description": "AI and Intelligent Systems Engineer specializing in AI, IoT, Smart Cities, Blockchain, and R&D projects",
       "url": "https://www.aminemahjoub.tech",
+      "image": "https://www.aminemahjoub.tech/amine-mahjoub-image.png",
       "email": "eminmahjoub@gmail.com",
       "telephone": "+216 90 210 908",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Ksibet El Mediouni, Monastir",
+        "addressLocality": "Ksibet El Mediouni",
+        "addressRegion": "Monastir",
         "addressCountry": "Tunisia"
       },
       "sameAs": [
         "https://linkedin.com/in/eminemahjoub",
         "https://github.com/eminemahjoub",
-        "https://twitter.com/eminemahjoub"
+        "https://twitter.com/eminemahjoub",
+        "https://www.credly.com/users/aminemahjoub"
       ],
       "alumniOf": {
         "@type": "EducationalOrganization",
-        "name": "University of Gafsa"
+        "name": "University of Gafsa",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gafsa",
+          "addressCountry": "Tunisia"
+        }
       },
       "knowsAbout": [
         "Artificial Intelligence",
@@ -78,7 +87,32 @@
         "JavaScript",
         "React",
         "Node.js"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification"
+        }
       ]
+    }
+    </script>
+    
+    <!-- Additional Structured Data for Portfolio Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Amine Mahjoub Portfolio",
+      "url": "https://www.aminemahjoub.tech",
+      "author": {
+        "@type": "Person",
+        "name": "Amine Mahjoub"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.aminemahjoub.tech/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
     

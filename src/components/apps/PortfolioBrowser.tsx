@@ -2,6 +2,7 @@ import { useState } from "react";
 import { personalInfo, experience, education, projects, research, skills, certifications, awards, publications, community } from "@/data/portfolio";
 import profileImg from "@/amine mahjoub image.png";
 import { Github, Linkedin, Facebook, FileText, Globe, Shield, Briefcase, GraduationCap, Award, X, Calendar, MapPin, ExternalLink } from "lucide-react";
+import { GitHubStats } from "../GitHubStats";
 
 export const PortfolioBrowser = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);

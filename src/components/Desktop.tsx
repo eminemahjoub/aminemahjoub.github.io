@@ -11,6 +11,8 @@ import { EducationApp } from "./apps/EducationApp";
 import { ContactApp } from "./apps/ContactApp";
 import { PortfolioBrowser } from "./apps/PortfolioBrowser";
 import { TerminalApp } from "./apps/TerminalApp";
+import { useNotifications, NotificationSystem } from "./UbuntuNotification";
+import { GitHubStats } from "./GitHubStats";
 
 export type AppType = "portfolio" | "terminal" | "linkedin" | "github" | "facebook" | "blog" | "resume" | "about" | "projects" | "skills" | "experience" | "education" | "contact" | null;
 
@@ -30,6 +32,7 @@ export const Desktop = () => {
   const [windows, setWindows] = useState<Window[]>([]);
   const [nextZIndex, setNextZIndex] = useState(1);
   const [currentTime, setCurrentTime] = useState(new Date());
+  const { notifications, addNotification, removeNotification } = useNotifications();
 
   // Update time every minute
   useEffect(() => {
@@ -193,6 +196,22 @@ export const Desktop = () => {
         windows={windows}
         onFocusWindow={focusWindow}
         onMinimizeWindow={minimizeWindow}
+        notificationCount={notifications.length}
+        onNotificationClick={() => {
+          // Notification panel can be opened here if needed
+          addNotification(
+            "Notifications",
+            `${notifications.length} notification${notifications.length > 1 ? 's' : ''} available`,
+            "info",
+            3000
+          );
+        }}
+      />
+      
+      {/* Notification System */}
+      <NotificationSystem
+        notifications={notifications}
+        onRemove={removeNotification}
       />
 
 

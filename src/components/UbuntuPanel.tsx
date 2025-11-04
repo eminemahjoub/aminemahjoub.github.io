@@ -1,14 +1,23 @@
 import { Window, AppType } from "./Desktop";
-import { Globe, Terminal, Folder, Briefcase, GraduationCap, Award, Mail } from "lucide-react";
+import { Globe, Terminal, Folder, Briefcase, GraduationCap, Award, Mail, Bell } from "lucide-react";
 
 interface UbuntuPanelProps {
   currentTime: Date;
   windows: Window[];
   onFocusWindow: (id: string) => void;
   onMinimizeWindow: (id: string) => void;
+  notificationCount?: number;
+  onNotificationClick?: () => void;
 }
 
-export const UbuntuPanel = ({ currentTime, windows, onFocusWindow, onMinimizeWindow }: UbuntuPanelProps) => {
+export const UbuntuPanel = ({ 
+  currentTime, 
+  windows, 
+  onFocusWindow, 
+  onMinimizeWindow,
+  notificationCount = 0,
+  onNotificationClick
+}: UbuntuPanelProps) => {
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -86,15 +95,29 @@ export const UbuntuPanel = ({ currentTime, windows, onFocusWindow, onMinimizeWin
         )}
       </div>
 
-      {/* Right: System Tray */}
-      <div className="flex items-center gap-4 text-white text-xs">
-        <div className="px-2 py-1 bg-black/40 rounded">
-          <span>{formatTime(currentTime)}</span>
-        </div>
-        <div className="px-2 py-1 bg-black/40 rounded">
-          <span>{formatDate(currentTime)}</span>
-        </div>
-      </div>
+            {/* Right: System Tray */}
+            <div className="flex items-center gap-4 text-white text-xs">
+              {/* Notification Indicator */}
+              {notificationCount > 0 && (
+                <button
+                  onClick={onNotificationClick}
+                  className="relative px-2 py-1 hover:bg-white/10 rounded transition-colors"
+                  title={`${notificationCount} notification${notificationCount > 1 ? 's' : ''}`}
+                >
+                  <Bell className="w-4 h-4" />
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                    {notificationCount > 9 ? '9+' : notificationCount}
+                  </span>
+                </button>
+              )}
+              
+              <div className="px-2 py-1 bg-black/40 rounded">
+                <span>{formatTime(currentTime)}</span>
+              </div>
+              <div className="px-2 py-1 bg-black/40 rounded">
+                <span>{formatDate(currentTime)}</span>
+              </div>
+            </div>
     </div>
   );
 };
