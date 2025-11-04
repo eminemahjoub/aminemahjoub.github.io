@@ -190,6 +190,68 @@ export const Desktop = () => {
       {/* Top Panel */}
       <UbuntuPanel currentTime={currentTime} />
 
+      {/* Desktop Folders */}
+      <div className="absolute top-40 left-20 flex flex-wrap gap-8 z-10">
+        <button
+          onClick={() => openApp("portfolio", "Portfolio")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-yellow-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Portfolio</span>
+        </button>
+
+        <button
+          onClick={() => openApp("projects", "Projects")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-blue-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Projects</span>
+        </button>
+
+        <button
+          onClick={() => openApp("experience", "Experience")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-purple-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Experience</span>
+        </button>
+
+        <button
+          onClick={() => openApp("education", "Education")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-green-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Education</span>
+        </button>
+
+        <button
+          onClick={() => openApp("skills", "Skills")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-red-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Skills</span>
+        </button>
+
+        <button
+          onClick={() => openApp("contact", "Contact")}
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+        >
+          <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-indigo-300/50">
+            📁
+          </div>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Contact</span>
+        </button>
+      </div>
 
       {/* Windows */}
       {windows.map((window) => (
