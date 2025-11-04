@@ -196,79 +196,143 @@ export const Desktop = () => {
         onMinimizeWindow={minimizeWindow}
       />
 
-      {/* Desktop Folders - Ubuntu Style */}
-      <div className="absolute top-40 left-20 flex flex-wrap gap-8 z-10">
-        <button
-          onClick={() => openApp("portfolio", "Portfolio")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#F6B73C" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Portfolio
-          </span>
-        </button>
+      {/* Desktop Folders - Organized in Groups */}
+      <div className="absolute top-40 left-20 flex flex-col gap-8 z-10">
+        {/* Group 1: Portfolio Sections */}
+        <div className="flex flex-col gap-1">
+          <div className="text-white text-xs font-semibold mb-2 px-2 bg-black/40 rounded">Portfolio</div>
+          <button
+            onClick={() => openApp("portfolio", "Portfolio")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#F6B73C" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Browser
+            </span>
+          </button>
+          <button
+            onClick={() => openApp("projects", "Projects")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#4A90E2" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Projects
+            </span>
+          </button>
+          <button
+            onClick={() => openApp("experience", "Experience")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#9B59B6" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Experience
+            </span>
+          </button>
+          <button
+            onClick={() => openApp("education", "Education")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#2ECC71" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Education
+            </span>
+          </button>
+          <button
+            onClick={() => openApp("skills", "Skills")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#E74C3C" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Skills
+            </span>
+          </button>
+          <button
+            onClick={() => openApp("contact", "Contact")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#3498DB" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Contact
+            </span>
+          </button>
+        </div>
 
-        <button
-          onClick={() => openApp("projects", "Projects")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#4A90E2" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Projects
-          </span>
-        </button>
+        {/* Group 2: Social Media */}
+        <div className="flex flex-col gap-1">
+          <div className="text-white text-xs font-semibold mb-2 px-2 bg-black/40 rounded">Social</div>
+          <button
+            onClick={() => window.open(personalInfo.social.github, '_blank')}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#24292e" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              GitHub
+            </span>
+          </button>
+          <button
+            onClick={() => window.open(personalInfo.social.linkedin, '_blank')}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#0077b5" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              LinkedIn
+            </span>
+          </button>
+          <button
+            onClick={() => window.open(personalInfo.social.twitter, '_blank')}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#1DA1F2" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Twitter
+            </span>
+          </button>
+          <button
+            onClick={() => window.open(personalInfo.social.credly, '_blank')}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#FF6B35" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Credly
+            </span>
+          </button>
+        </div>
 
-        <button
-          onClick={() => openApp("experience", "Experience")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#9B59B6" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Experience
-          </span>
-        </button>
-
-        <button
-          onClick={() => openApp("education", "Education")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#2ECC71" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Education
-          </span>
-        </button>
-
-        <button
-          onClick={() => openApp("skills", "Skills")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#E74C3C" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Skills
-          </span>
-        </button>
-
-        <button
-          onClick={() => openApp("contact", "Contact")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
-        >
-          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <FolderIcon color="#3498DB" size={64} />
-          </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
-            Contact
-          </span>
-        </button>
+        {/* Group 3: Tools */}
+        <div className="flex flex-col gap-1">
+          <div className="text-white text-xs font-semibold mb-2 px-2 bg-black/40 rounded">Tools</div>
+          <button
+            onClick={() => openApp("terminal", "Terminal")}
+            className="flex flex-col items-start gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <FolderIcon color="#000000" size={64} />
+            </div>
+            <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+              Terminal
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Windows */}
