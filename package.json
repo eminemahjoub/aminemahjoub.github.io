@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://eminemahjoub.github.io/amine-portfolio",
+    "homepage": "https://www.aminemahjoub.tech",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
