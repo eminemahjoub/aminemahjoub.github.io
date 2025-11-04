@@ -11,6 +11,7 @@ import { EducationApp } from "./apps/EducationApp";
 import { ContactApp } from "./apps/ContactApp";
 import { PortfolioBrowser } from "./apps/PortfolioBrowser";
 import { TerminalApp } from "./apps/TerminalApp";
+import { FolderIcon } from "./FolderIcon";
 
 export type AppType = "portfolio" | "terminal" | "linkedin" | "github" | "facebook" | "blog" | "resume" | "about" | "projects" | "skills" | "experience" | "education" | "contact" | null;
 
@@ -188,68 +189,85 @@ export const Desktop = () => {
       </div>
 
       {/* Top Panel */}
-      <UbuntuPanel currentTime={currentTime} />
+      <UbuntuPanel 
+        currentTime={currentTime}
+        windows={windows}
+        onFocusWindow={focusWindow}
+        onMinimizeWindow={minimizeWindow}
+      />
 
-      {/* Desktop Folders */}
+      {/* Desktop Folders - Ubuntu Style */}
       <div className="absolute top-40 left-20 flex flex-wrap gap-8 z-10">
         <button
           onClick={() => openApp("portfolio", "Portfolio")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-yellow-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#F6B73C" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Portfolio</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Portfolio
+          </span>
         </button>
 
         <button
           onClick={() => openApp("projects", "Projects")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-blue-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#4A90E2" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Projects</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Projects
+          </span>
         </button>
 
         <button
           onClick={() => openApp("experience", "Experience")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-purple-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#9B59B6" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Experience</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Experience
+          </span>
         </button>
 
         <button
           onClick={() => openApp("education", "Education")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-green-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#2ECC71" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Education</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Education
+          </span>
         </button>
 
         <button
           onClick={() => openApp("skills", "Skills")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-red-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#E74C3C" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Skills</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Skills
+          </span>
         </button>
 
         <button
           onClick={() => openApp("contact", "Contact")}
-          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-3 rounded-lg transition-all"
+          className="flex flex-col items-center gap-2 group hover:bg-white/10 p-2 rounded transition-all cursor-pointer"
         >
-          <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition-transform border-2 border-indigo-300/50">
-            📁
+          <div className="w-16 h-16 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <FolderIcon color="#3498DB" size={64} />
           </div>
-          <span className="text-white text-sm font-medium drop-shadow-lg text-center">Contact</span>
+          <span className="text-white text-sm font-medium drop-shadow-lg text-center bg-black/40 px-2 py-0.5 rounded">
+            Contact
+          </span>
         </button>
       </div>
 
