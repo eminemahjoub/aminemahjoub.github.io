@@ -1,5 +1,6 @@
 import { projects } from "@/data/portfolio";
 import { ExternalLink, Github } from "lucide-react";
+import { getCountryFlag } from "@/utils/countryFlags";
 
 export const ProjectsApp = () => {
   return (
@@ -12,7 +13,14 @@ export const ProjectsApp = () => {
             className="bg-[#2d1b1e] p-5 rounded-lg border border-orange-500/20 hover:border-orange-500/50 transition-colors"
           >
             <div className="flex items-start justify-between mb-3">
-              <h3 className="text-xl font-bold text-white">{project.title}</h3>
+              <div className="flex items-center gap-2 flex-1">
+                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                {(project as any).countryCode && (
+                  <span className="text-2xl" title={`Country: ${(project as any).countryCode}`}>
+                    {getCountryFlag((project as any).countryCode)}
+                  </span>
+                )}
+              </div>
               {project.featured && (
                 <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">
                   Featured

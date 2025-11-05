@@ -25,6 +25,7 @@ export const projects = [
     tags: ["AI", "Healthcare", "Machine Learning", "Python", "TensorFlow"],
     featured: true,
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia - can be updated based on actual project location
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const projects = [
     tags: ["Blockchain", "Solidity", "ERC-20", "Ethereum", "Web3"],
     featured: true,
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ export const projects = [
     tags: ["Computer Vision", "MediaPipe", "Python", "AI", "Accessibility"],
     featured: true,
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ export const projects = [
     longDescription: "Automated mail sorting solution using Raspberry Pi, OCR technology, and mechanical actuators for efficient postal processing.",
     tags: ["Raspberry Pi", "OCR", "Automation", "Python", "Hardware"],
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ export const projects = [
     tags: ["AI", "Education", "Gamification", "React", "Node.js"],
     featured: true,
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 6,
@@ -68,6 +73,7 @@ export const projects = [
     longDescription: "Interactive platform for learning cybersecurity through Capture The Flag challenges and hands-on penetration testing exercises.",
     tags: ["Cybersecurity", "Web Development", "Node.js", "React", "Education"],
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 7,
@@ -76,6 +82,7 @@ export const projects = [
     longDescription: "Mobile educational application designed for deaf students, featuring sign language integration and accessible learning materials. Developed in collaboration with Prime Ministry and World Bank.",
     tags: ["Accessibility", "Mobile", "Education", "Social Impact"],
     featured: true,
+    countryCode: "TN", // Tunisia
   },
   {
     id: 8,
@@ -84,6 +91,7 @@ export const projects = [
     longDescription: "Deep learning system using Convolutional Neural Networks to detect and classify chest diseases from medical imaging.",
     tags: ["AI", "CNN", "Healthcare", "Python", "TensorFlow"],
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 9,
@@ -92,6 +100,7 @@ export const projects = [
     longDescription: "Browser extension that enables voice-controlled web search and navigation for enhanced accessibility.",
     tags: ["Accessibility", "JavaScript", "Voice Recognition", "Web Extension"],
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ export const projects = [
     longDescription: "IoT-enabled smart bins with sensors that track plastic waste in real-time, providing analytics dashboards for waste management optimization.",
     tags: ["IoT", "Sensors", "Data Analytics", "Raspberry Pi", "Arduino"],
     github: "https://github.com/eminemahjoub",
+    countryCode: "TN", // Tunisia
   },
 ];
 
@@ -173,6 +183,8 @@ export const experience = [
     location: "Marseille, France · Remote",
     description: "Developed and optimized multilingual conversational AI systems for customer interaction. Focused on NLP model integration, prompt optimization, and multilingual dataset preprocessing.",
     icon: "code",
+    countryCode: "FR", // France
+    logo: "/logos/euromed-innovation.png", // Logo path - to be added later
   },
   {
     id: 2,
@@ -183,6 +195,8 @@ export const experience = [
     location: "Tunisia",
     description: "Python development and AI system integration for cybersecurity solutions.",
     icon: "code",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/tudigisec.png", // Logo path - to be added later
   },
   {
     id: 3,
@@ -193,6 +207,8 @@ export const experience = [
     location: "Tunisia",
     description: "Built digital solutions to optimize entertainment production pipelines.",
     icon: "video",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/sky-media.png", // Logo path - to be added later
   },
   {
     id: 4,
@@ -203,6 +219,8 @@ export const experience = [
     location: "Tunisia",
     description: "Created Plastoken, an ERC-20 token and blockchain marketplace for recycling. Developed an IoT-based recycling monitoring system.",
     icon: "satellite",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/digital-research.png", // Logo path - to be added later
   },
   {
     id: 5,
@@ -213,6 +231,8 @@ export const experience = [
     location: "Tunisia",
     description: "Developed a full-stack insurance management application using Angular, NestJS, and PostgreSQL.",
     icon: "code",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/digital-research.png", // Logo path - to be added later
   },
   {
     id: 6,
@@ -223,6 +243,8 @@ export const experience = [
     location: "Remote",
     description: "Built real-time sign language recognition, voice assistant with multilingual support, predictive medicine system (Predicare), and mail sorting automation with Raspberry Pi.",
     icon: "code",
+    countryCode: "REMOTE", // Remote work
+    logo: "/logos/freelance.png", // Logo path - to be added later
   },
   {
     id: 7,
@@ -233,6 +255,8 @@ export const experience = [
     location: "Gafsa, Tunisia",
     description: "Hosted a weekly technology and innovation segment, discussing latest tech trends and innovations.",
     icon: "video",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/radio-gafsa.png", // Logo path - to be added later
   },
   {
     id: 8,
@@ -243,6 +267,8 @@ export const experience = [
     location: "Tunisia",
     description: "Developed responsive React web applications with modern UI/UX principles.",
     icon: "code",
+    countryCode: "TN", // Tunisia
+    logo: "/logos/lexi.png", // Logo path - to be added later
   },
 ];
 
