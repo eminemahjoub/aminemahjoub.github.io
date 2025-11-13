@@ -1,6 +1,15 @@
 import { Github, Linkedin, Rocket, Share2, Mail, Heart } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 
+const quickLinks = [
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Community", href: "#community" },
+  { label: "Contact", href: "#contact" },
+];
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -23,14 +32,27 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                {["About", "Projects", "Experience", "Skills", "Community", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase()}`}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {item}
-                    </a>
+                {quickLinks.map((item) => (
+                  <li key={item.label}>
+                    {item.href.startsWith("#") ? (
+                      <a
+                        href={item.href}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {item.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

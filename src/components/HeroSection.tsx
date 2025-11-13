@@ -44,6 +44,9 @@ export const HeroSection = () => {
             >
               Get in Touch
             </Button>
+            <Button size="lg" variant="outline" className="px-8" asChild>
+              <a href="/about">About Amine Mahjoub</a>
+            </Button>
             <Button
               size="lg"
               variant="outline"
